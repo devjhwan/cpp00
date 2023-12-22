@@ -6,15 +6,15 @@
 #    By: junghwle <junghwle@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/03 14:32:42 by junghwle          #+#    #+#              #
-#    Updated: 2023/12/22 01:26:24 by junghwle         ###   ########.fr        #
+#    Updated: 2023/12/22 02:03:28 by junghwle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=megaphone
+NAME=phonebook
 
 SRCDIR=.
 OBJDIR=objs
-SRCS=megaphone.cpp
+SRCS=main.cpp Phonebook.cpp Contact.cpp
 OBJS=$(patsubst %.cpp, $(OBJDIR)/%.o, $(SRCS))
 DEPS=$(OBJS:.o=.d)
 
@@ -22,7 +22,7 @@ INCLUDE=-I.
 CC=g++
 CFLAGS=-Wall -Werror -Wextra
 DEPFLAGS=-MMD
-#EXTRAFLAGS=-std=c++98
+EXTRAFLAGS=-std=c++98
 LIBRARIES=
 
 all: $(OBJDIR) $(NAME)

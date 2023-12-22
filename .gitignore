@@ -1,2 +1,6 @@
 /.vscode/
-
+**/objs/
+ex00/megaphone
+ex01/phonebook
+**/*.swp
+**/input_test

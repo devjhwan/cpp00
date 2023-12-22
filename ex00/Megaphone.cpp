@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junghwle <junghwle@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 01:15:43 by junghwle          #+#    #+#             */
-/*   Updated: 2023/12/22 01:37:15 by junghwle         ###   ########.fr       */
+/*   Updated: 2023/12/22 01:57:48 by junghwle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <cctype>
 
-int	isLowcase(char ch)
-{
-	return (ch >= 'a' && ch <= 'z');
-}
-
-void	printChar(char ch)
-{
-	std::cout << ch;
-}
-
-void	printStringUppercase(char *str)
+void	strToUpperCase(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (isLowcase(str[i]))
-			printChar(str[i] - 32);
-		else
-			printChar(str[i]);
+		str[i] = std::toupper(str[i]);
 		i++;
 	}
 }
@@ -47,7 +35,11 @@ int	main(int argc, char **argv)
 	{
 		i = 1;
 		while (argv[i] != NULL)
-			printStringUppercase(argv[i++]);
+		{
+			strToUpperCase(argv[i]);
+			std::cout << argv[i];
+			i++;
+		}
 	}
 	std::cout << '\n';
 	return (0);

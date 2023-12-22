@@ -6,7 +6,7 @@
 #    By: junghwle <junghwle@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/03 14:32:42 by junghwle          #+#    #+#              #
-#    Updated: 2023/12/22 01:26:24 by junghwle         ###   ########.fr        #
+#    Updated: 2023/12/22 01:41:56 by junghwle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ INCLUDE=-I.
 CC=g++
 CFLAGS=-Wall -Werror -Wextra
 DEPFLAGS=-MMD
-#EXTRAFLAGS=-std=c++98
+EXTRAFLAGS=-std=c++98
 LIBRARIES=
 
 all: $(OBJDIR) $(NAME)
