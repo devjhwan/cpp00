@@ -6,7 +6,7 @@
 /*   By: junghwle <junghwle@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 01:41:47 by junghwle          #+#    #+#             */
-/*   Updated: 2023/12/22 03:59:14 by junghwle         ###   ########.fr       */
+/*   Updated: 2023/12/22 04:04:34 by junghwle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,9 @@ void	PhoneBook::AddContact(std::string firstName, std::string lastName, \
 	
 	contactArr[curContactSize % 8] = Contact(firstName, lastName, nickName, \
 										phoneNumber, darkestSecret);
+	std::cout << "New contact added successfuly on index " << \
+					curContactSize % 8 + 1<< '\n';
 	curContactSize++;
-	std::cout << firstName << '\n';
-	std::cout << lastName << '\n';
-	std::cout << nickName << '\n';
-	std::cout << phoneNumber << '\n';
-	std::cout << darkestSecret << '\n';
 }
 
 int	PhoneBook::GetContactArrSize(void)
