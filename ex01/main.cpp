@@ -6,7 +6,7 @@
 /*   By: junghwle <junghwle@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 02:03:32 by junghwle          #+#    #+#             */
-/*   Updated: 2023/12/22 03:35:40 by junghwle         ###   ########.fr       */
+/*   Updated: 2023/12/23 02:32:10 by junghwle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ static bool	isNumber(std::string str)
 	int	i;
 
 	i = 0;
+	if (str[i] == '+' || str[i] == '-')
+		i++;
 	while (str[i] != '\0')
 		if (!std::isdigit(str[i++]))
 			return (false);
@@ -69,7 +71,7 @@ static void	searchContact(PhoneBook phonebook)
 
 	phonebook.DisplayContactList();
 	contactArrSize = phonebook.GetContactArrSize();
-	while (1)
+	while (contactArrSize > 0)
 	{
 		input = getUserInput("input > index > ");
 		if (std::cin.eof())
